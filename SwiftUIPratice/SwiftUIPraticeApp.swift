@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @main
 struct SwiftUIPraticeApp: App {
@@ -14,4 +15,7 @@ struct SwiftUIPraticeApp: App {
             ContentView()
         }
     }
+}
+#Preview {
+    ContentView()
 }
