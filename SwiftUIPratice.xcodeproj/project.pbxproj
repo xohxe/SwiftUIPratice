@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01EE9B192AEA438B0040063A /* SceneStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B182AEA438B0040063A /* SceneStorageView.swift */; };
+		01EE9B1B2AEA43960040063A /* AppStorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B1A2AEA43960040063A /* AppStorageView.swift */; };
+		01EE9B1E2AEA54200040063A /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B1D2AEA54200040063A /* Storage.swift */; };
+		01EE9B202AEA83C10040063A /* ExtensionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE9B1F2AEA83C10040063A /* ExtensionCollection.swift */; };
 		14162F002ADD1CA8009C5C59 /* SwiftUIPraticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162EFF2ADD1CA8009C5C59 /* SwiftUIPraticeApp.swift */; };
 		14162F022ADD1CA8009C5C59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162F012ADD1CA8009C5C59 /* ContentView.swift */; };
 		14162F042ADD1CAB009C5C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14162F032ADD1CAB009C5C59 /* Assets.xcassets */; };
@@ -19,9 +23,14 @@
 		14162F1B2ADD1DE5009C5C59 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162F1A2ADD1DE5009C5C59 /* UI.swift */; };
 		14162F1D2ADD1DF3009C5C59 /* UIListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162F1C2ADD1DF3009C5C59 /* UIListView.swift */; };
 		14162F1F2ADD1DFD009C5C59 /* UIDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162F1E2ADD1DFD009C5C59 /* UIDetailView.swift */; };
+		14162F282ADE619B009C5C59 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162F272ADE619B009C5C59 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01EE9B182AEA438B0040063A /* SceneStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStorageView.swift; sourceTree = "<group>"; };
+		01EE9B1A2AEA43960040063A /* AppStorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageView.swift; sourceTree = "<group>"; };
+		01EE9B1D2AEA54200040063A /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		01EE9B1F2AEA83C10040063A /* ExtensionCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCollection.swift; sourceTree = "<group>"; };
 		14162EFC2ADD1CA8009C5C59 /* SwiftUIPratice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPratice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14162EFF2ADD1CA8009C5C59 /* SwiftUIPraticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPraticeApp.swift; sourceTree = "<group>"; };
 		14162F012ADD1CA8009C5C59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +44,7 @@
 		14162F1A2ADD1DE5009C5C59 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		14162F1C2ADD1DF3009C5C59 /* UIListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIListView.swift; sourceTree = "<group>"; };
 		14162F1E2ADD1DFD009C5C59 /* UIDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDetailView.swift; sourceTree = "<group>"; };
+		14162F272ADE619B009C5C59 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01EE9B1C2AEA53E40040063A /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				01EE9B182AEA438B0040063A /* SceneStorageView.swift */,
+				01EE9B1A2AEA43960040063A /* AppStorageView.swift */,
+				01EE9B1D2AEA54200040063A /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		14162EF32ADD1CA8009C5C59 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +87,8 @@
 		14162EFE2ADD1CA8009C5C59 /* SwiftUIPratice */ = {
 			isa = PBXGroup;
 			children = (
+				01EE9B1C2AEA53E40040063A /* Storage */,
+				14162F262ADE618C009C5C59 /* Test */,
 				14162F132ADD1D8F009C5C59 /* UIItem */,
 				14162F122ADD1D86009C5C59 /* Question */,
 				14162F0F2ADD1D60009C5C59 /* Func */,
@@ -91,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				14162F102ADD1D73009C5C59 /* FuncCollection.swift */,
+				01EE9B1F2AEA83C10040063A /* ExtensionCollection.swift */,
 			);
 			path = Func;
 			sourceTree = "<group>";
@@ -113,6 +136,14 @@
 				14162F1E2ADD1DFD009C5C59 /* UIDetailView.swift */,
 			);
 			path = UIItem;
+			sourceTree = "<group>";
+		};
+		14162F262ADE618C009C5C59 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				14162F272ADE619B009C5C59 /* test.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,8 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14162F152ADD1DA8009C5C59 /* Question.swift in Sources */,
+				01EE9B1E2AEA54200040063A /* Storage.swift in Sources */,
 				14162F1B2ADD1DE5009C5C59 /* UI.swift in Sources */,
 				14162F1D2ADD1DF3009C5C59 /* UIListView.swift in Sources */,
+				01EE9B202AEA83C10040063A /* ExtensionCollection.swift in Sources */,
+				01EE9B1B2AEA43960040063A /* AppStorageView.swift in Sources */,
+				01EE9B192AEA438B0040063A /* SceneStorageView.swift in Sources */,
 				14162F0E2ADD1D1C009C5C59 /* TabBar.swift in Sources */,
 				14162F022ADD1CA8009C5C59 /* ContentView.swift in Sources */,
 				14162F002ADD1CA8009C5C59 /* SwiftUIPraticeApp.swift in Sources */,
@@ -195,6 +230,7 @@
 				14162F1F2ADD1DFD009C5C59 /* UIDetailView.swift in Sources */,
 				14162F172ADD1DBF009C5C59 /* QuestionListView.swift in Sources */,
 				14162F112ADD1D73009C5C59 /* FuncCollection.swift in Sources */,
+				14162F282ADE619B009C5C59 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
