@@ -32,6 +32,9 @@ struct AppStorageView: View {
                 .font(.title)
                 .fontWeight(.bold)
             
+            Text("해당 프로젝트는 SwiftUI 실습 예제를 다루면서, 작업한 내역을 정리하였습니다.")
+                .foregroundColor(.gray)
+            
             ColorPicker("UI예제 배경색 변경", selection: Binding(
                 get: {self.bgColor},
                 set: { newValue in
@@ -41,7 +44,8 @@ struct AppStorageView: View {
                     }
                 })
                         
-            )
+            ).padding(.vertical)
+            
             Spacer()
         }.padding(30)
         

@@ -191,3 +191,12 @@ struct UIDetail04: View {
 }
 
 
+
+struct ExList01: View {
+    var body: some View {
+        VStack{
+ 
+            
+        }.padding()
+    }
+}

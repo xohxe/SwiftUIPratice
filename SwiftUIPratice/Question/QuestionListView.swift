@@ -11,6 +11,9 @@ import UIKit
 struct QuestionListView: View {
     var questions : [Question]
     var uis : [UIItem]
+    var alignments : [AlignmentItem]
+    
+    @State private var searchText = ""
     
     @AppStorage("bgColor") var bgColorData : String = (UserDefaults.standard.string(forKey: "bgColor") ?? "0.98,0.9,0.2")
  
@@ -22,10 +25,11 @@ struct QuestionListView: View {
             alpha: 1.0
         ))
     }
-    init(questions: [Question], uis: [UIItem], bgColorData: String) {
+    init(questions: [Question], uis: [UIItem],alignments:[AlignmentItem], bgColorData: String) {
         self.questions = questions
         self.uis = uis
         self.bgColorData = bgColorData
+        self.alignments = alignments
          
         UITableView.appearance().backgroundColor = .green
     }
@@ -33,13 +37,14 @@ struct QuestionListView: View {
     
     
     var body: some View {
+            ZStack{
+                NavigationView{
+                    
+               
+                    
         
-        
-        NavigationView{
-            
-            VStack{
-                
                 List{
+               
                     Section {
                         ForEach(questions) { question in
                             NavigationLink(destination: QuestionDetail(question: question), label: {Text(question.name)})
@@ -49,25 +54,39 @@ struct QuestionListView: View {
                     }
                     
                     Section{
-                        ForEach(uis){ ui in
-                            NavigationLink(destination: ui.destination, label: {
-                                Text("\(ui.name)") })
+                        ForEach(uis){ el in
+                            NavigationLink(destination: el.destination, label: {
+                                Text("\(el.name)") })
                         }
                     } header: {
                         Text("UI 예제")
                     }
                     
-                    
+                    Section{
+                        ForEach(alignments){ el in
+                            NavigationLink(destination: el.destination, label: {
+                                Text("\(el.name)") })
+                        }
+                    } header:{
+                        Text("Alignment 예제")
+                    }
                 
-                }.listStyle(.insetGrouped)
+                }.listStyle(GroupedListStyle())
                     .background(bgColor)
                     .scrollContentBackground(.hidden)
                     .navigationTitle("Home")
-             //   Spacer()
+                    .navigationBarItems(trailing: Button(action: {
+                        
+                    }){
+                        Image(systemName: "magnifyingglass")
+                            .imageScale(.large)
+                            .foregroundColor(.black)
+                            
+                    })
+                    
             }
-             
-        }
-        // .navigationBarTitleDisplayMode(.inline)
+        }.edgesIgnoringSafeArea(.all)
+        
         
              
     }

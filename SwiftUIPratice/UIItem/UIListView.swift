@@ -32,8 +32,7 @@ struct UIListView: View {
     
     var body: some View {
         
-        ZStack{
-    
+        NavigationStack{ 
             List(uis){ ui in
                 NavigationLink(destination: ui.destination, label: {
                     Text("\(ui.name)") })

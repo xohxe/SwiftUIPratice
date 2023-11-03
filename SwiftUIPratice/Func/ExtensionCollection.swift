@@ -18,6 +18,19 @@ extension Color {
         return (Double(components[0]), Double(components[1]), Double(components[2]))
     }
 }
+
+extension VerticalAlignment{
+    
+    private enum OneThird : AlignmentID{
+        static func defaultValue(in d : ViewDimensions) -> CGFloat {
+            return d.height / 3
+        }
+    }
+    static let oneThird = VerticalAlignment(OneThird.self)
+}
+
+
+
 //
 //extension UINavigationController {
 //    override open func viewDidLoad() {
